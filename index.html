@@ -2,26 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ALETHEIA</title>
 
 </head>
 <body>
-    <header id="hero-top">
-        <nav class="main-nav">
-            <span style="color: #009DFF;" class="material-symbols-outlined">mindfulness</span>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#footer">Footer</a></li>
-            </ul>
-        </nav>
+<header id="hero-top">
+            <a><span style="color: #009DFF;" class="material-symbols-outlined">mindfulness</span></a>
+                    <div id="toggleBtn" class="menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#ODODOD">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+            </svg>
+        </div>
 
-    </header>
+
+    <nav class="main-nav">
+        <ul class="menu" id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#philosophy">Philosophy</a></li>
+            <li><a href="#footer">Footer</a></li>
+
+        </ul>
+
+    </nav>
+</header>
+
 
     <main id="home">
         <section class="hero-top">
@@ -32,17 +47,19 @@
             </div>
 
             <div class="hero-search">
-                <input type="text" placeholder="Look for an idea...">
-                <button style="background-color:#009DFF"><span class="material-symbols-outlined">search</span></button>
-                
+                <div class="search-group">
+                    <input type="text" placeholder="Look for an idea...">
+                    <button style="background-color:#009DFF"><span class="material-symbols-outlined">search</span></button>
+                </div>
                 <p>La pensée requiert plus de précision.</p>
             </div>
+
         </section>
 
         <section class="main-content">
             <img width="200px" src="imgs/pngph.webp">
+            
             <div class="content-search">
-                <h3>Silence is an <span style="color: #009DFF;">Answer</span>.</h3>
                 <p>
                     Explore the depths of human thought through
                     the words of the great masters.
@@ -78,15 +95,15 @@
     </main>
 
     <footer id="footer">
-        <div class="">
+        <div class="precise">
             <h4>© 2026 — La Pensée Précise</h4>
-            <a href="" class="fa fa-github"></a>
+            <a href="https://github.com/Smkh4x" class="fa fa-github"></a>
         </div>
         
 
     </footer>
 
-    
+    <script src="script.js"></script>
 </body>
 </html>
 
