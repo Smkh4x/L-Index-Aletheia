@@ -8,14 +8,24 @@ async function checkInput() {
     }
 
     try {
-        const res = await fetch("https://api-wisdom.deontex.com/api/v1/quotes");
+        const res = await fetch(`https://api-wisdom.deontex.com/api/v1/quotes?search=${input}`);
         const data = await res.json();
 
-        const api = data[0]
+        const foundData = data.data.filter(q => 
+            q.philosopher_name.toLowerCase().includes(input.toLowerCase())
+        );
 
-        document.getElementById('ma9ola-1').innerHTML = `
-            <p>${api}</p>
-        `;
+        if (foundData.length > 0) {
+            document.getElementById('ma9ola-1').innerHTML = foundData.map(q => `
+                <div>
+                    <h3 style="color :#009DFF" >${q.philosopher_name}<h3>
+                    <p>${q.quote_text}</p>
+                    <br>
+                </div>
+            `);
+        } else {
+            document.getElementById('ma9ola-1').innerHTML = "Makayn 7ta result";
+        }
 
     } catch (error) {
         console.error(error);
