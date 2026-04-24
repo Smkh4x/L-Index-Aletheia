@@ -15,7 +15,7 @@ async function checkInput() {
             q.philosopher_name.toLowerCase().includes(input.toLowerCase())
         );
 
-        if (foundData.length > 0) {
+        if (foundData.length) {
             document.getElementById('ma9ola-1').innerHTML = foundData.map(q => `
                 <div>
                     <h3 style="color :#009DFF" >${q.philosopher_name}<h3>
